@@ -1,0 +1,235 @@
+<!DOCTYPE HTML>
+<html><head>  
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+    <link href="styles/user_docs.css" rel="stylesheet" type="text/css" />
+    <link href="styles/local_extensions.css" rel="stylesheet" type="text/css" />
+    <link href="styles/app.css" rel="stylesheet" type="text/css" />
+    <title>
+      Image Capture - Shape2Earth User Guide
+    </title>
+  
+  </head><body id="index">
+    <a name="top"></a>
+    <div id="header">
+      <div id="logo">
+       <a href="http://warp4.com"><img alt="warp4.com" src="graphics/shp2e3.gif" border="0" /></a> 
+      </div>
+      <div id="contact" style="position: relative; float: right"><a href="mailto:info@shape2earth.com" target="_blank">Questions or Comments?</a> </div>
+    <!--  <h1 id="doc_title">
+        Shape2Earth for MapWindow User Guide
+      </h1> -->
+    </div>
+    <div id="wrapper">
+       <div id="sidenav">
+          <ul>            
+             <li>
+              <h1>
+                <a href="Guide">Introduction</a>
+              </h1>
+            </li>
+            <li>            
+              <h1>
+                <a href="getting_to_know">Getting to Know Shape2Earth</a>
+              </h1>
+              <ul>
+                <li>
+                  <a href="getting_to_know#kml_tab">KML Tab</a>
+                </li>              
+                <li>
+                  <a href="getting_to_know#properties_tab">Properties Tab</a>
+                </li>
+                <li>
+                  <a href="getting_to_know#gis_tab">GIS Data</a>
+                </li>
+                <li>
+                  <a href="getting_to_know#query_tab">Query Tab</a>
+                </li>
+                 <li>
+                  <a href="getting_to_know#options_tab">Options Tab</a>
+                </li>
+                 <li>
+                  <a href="getting_to_know#balloon_tab">Balloon Tab</a>
+                </li>              
+              </ul>
+            </li>
+             <li>
+              <h1>
+                <a href="shape2kml">Converting Shapefiles to KML</a>
+              </h1>
+            <ul>
+            <li><a href="shape2kml#point_data">Converting Point Data</a></li>
+              <li><a href="shape2kml#line_data">Converting Line Data</a></li>
+              <li><a href="shape2kml#polygon_data">Converting Polygon Data</a></li>
+            </ul>
+            </li>
+            <li>
+              <h1>
+                <a href="map_overlay">Create Google Earth Overlays</a>
+              </h1>
+            </li>            
+             <li class="selected">
+              <h1>
+                <strong>Capture Georectified Google Earth Images</strong>
+              </h1>
+              <ul>
+              <li><a href="#save_bw">Capture Black and White</a></li>
+              <li><a href="#save_c">Capture Color (paid version)</a></li>
+              <li><a href="#image_pro">Georectify Google Earth Pro Images (paid version)</a></li>
+              <li><a href="#image_reproject">Reprojecting Images</a></li>
+              </ul>
+            </li>        
+             <li>
+              <h1>
+                <a href="screen_overlay">Add a Screen Overlay</a>
+              </h1>
+            </li>
+          </ul>        
+      </div>
+      <div id="pagecontent">
+        <h2>
+            Capturing Geo-Rectified Images from Google Earth
+        </h2><br />       
+        <p style="font-weight: bold;">NOTE: This functionality is being replaced by <a target="_blank" href="http://warp4.com/pages/image2earth.html"> Image2Earth</a></p>
+          <p>
+          Shape2Earth allows you to create a world file and projection file as part of the image copying process made available by Google Earth.  Please refer to the 
+            <a href="http://earth.google.com/intl/en-US/license.html">Google Earth Terms of Service</a> 
+            to ensure your use of this capability meets complies with any Google Earth 
+            restrictions (this may change over time).</p> 
+
+        <h2>
+          Saving Georectified Images
+          </h2>
+          <p>
+            Shape2Earth can capture black and white images in evaluation mode, and color images when 
+              licensed.&nbsp; The captured image will be saved as a jpg, along with a .jpw 
+              world file, and .prj projection file&nbsp; These images can then be loaded into 
+              MapWindow, or other GIS software&nbsp;           </p>
+           <div class="note">
+           <strong>Note:</strong>
+          
+           <p style="font-weight: bold; color: #FF0000">This capability only works with Google Earth versions prior to version 7.1.5.1557.</p>
+               
+           <p>This functionality is being replaced by <a target="_blank" href="http://warp4.com/pages/image2earth.html"> Image2Earth</a></p>
+            <p style="font-weight: bold; color: #FF0000">Images will be significantly more accurate if the Google Earth Terrain is turned off.</p>
+               <p>The World File and Projection file are written in WGS84.&nbsp; The images can be 
+                   reprojected using MapWindow, or other GIS software.</p>
+        </div>
+          <h2>
+              <a name="save_bw"></a>Save Black and White Image</h2>
+           <p>
+            Select 'Get Image from GE' from the Shape2Earth menu:
+          </p><br />
+          <img alt="Black and White Image Capture Menu" src="graphics/capture/cap_bw_menua.png" style="padding-left: 60px"/>
+          <p>
+            Navigate Google Earth to the area you wish to capture, and click 'Capture'.  Then select the location on your hard drive and name the file in the Save Dialog box.:
+          </p><br />
+          <img alt="Black and White Image Capture Form" src="graphics/capture/cap_bw_form.jpg" style="padding-left: 60px"/>
+          <p>
+            Load  the image in MapWindow GIS, or other GIS software:
+          </p><br />
+          <img alt="Load Black and White Image in MapWindow" src="graphics/capture/cap_bw_in_mw.png" style="padding-left: 60px"/>
+          <h2>
+              <a name="save_c"></a>Save Color Image</h2>
+               <div class="note">
+           <strong>Note:</strong>
+            <p>Saving Color image overlays is only available when Shape2Earth has been 
+                purchased.</p>
+        </div>
+           <p> Select 'Advanced Tools' from the Shape2Earth menu:</p><br />
+          <img alt="Color Image Capture Menu" src="graphics/capture/advanced_tools.png" style="padding-left: 60px"/>
+          <p>
+              &nbsp;A Toolbar&nbsp;with six buttons will appear in the upper left hand corner of the 
+              Google Earth Globe Window.
+          </p>
+          <ul>
+              <li><img src="graphics/capture/options.gif" alt="Capture Options" />
+                Options - Not yet implemented
+          </li>
+          <li><img src="graphics/capture/accept.png" alt="Save Button" />
+                Capture - Captures the current View as a georeferenced image
+          </li>
+              <li><img src="graphics/capture/add.gif" alt="Load Button" />
+                Capture and Load - Captures the current View as a georeferenced image and loads in MapWindow
+          </li>
+           <li><img src="graphics/capture/cog_edit.png" alt="Pro Button" />
+                Georectify Google Earth Pro Images - Create a world file for a high resolution image captured using <a href='http://earth-store.sketchup.com/'>Google Earth Pro</a>  (Requires a GE Pro license)
+          </li>
+           <li><img src="graphics/capture/overlay.png" alt="ScreenOverlay Button" />
+                Add a Screen Overlay - Select an image and place it on the globe window to save as a <a href='http://code.google.com/apis/kml/documentation/kmlreference.html#screenoverlay'>Screen Overlay</a>
+          </li>
+           <li><img src="graphics/capture/close.gif" alt="Close Capture" />
+                Close - Closes the Capture Toolbar
+          </li>
+          </ul>
+          <p>
+                            &nbsp;A&nbsp; Navigate Google Earth to the area you wish to capture, and click 
+              &#39;Capture&#39;. Then select the location on your hard drive and name the file in the 
+              Save Dialog box.
+          </p>
+          <br />
+          <img alt="Color Image Capture Form" src="graphics/capture/advanced_toolbar.jpg" 
+              style="padding-left: 60px; height: 735px; width: 826px;"/>
+          <p>
+            Load  the image in MapWindow GIS, or other GIS software:
+          </p><br />
+          <img alt="Load Color Image in MapWindow" src="graphics/capture/cap_color_mw.png" style="padding-left: 60px"/>
+           <h2>
+              <a name="image_pro"></a>Georeference Google Earth Pro Image</h2>
+              <p><a href="http://earth-store.sketchup.com/">Google Earth Pro</a> allows you to 
+                  save images at a very high resolution (<a href='http://www.google.com/enterprise/earthmaps/earth_pro.html'>up 
+                  to 4,800 pixels</a>).&nbsp; You can apply a world file captured using the &quot;Save 
+                  Color Image&quot; method by doing the following.</p>
+          <ol>
+              <li>&nbsp;Zoom into the area on Google Earth that you would like to capture.</li>
+              <li><img src="graphics/capture/accept.png" alt="Save Button" /> Capture the current 
+                  View as a georeferenced image and save to file.</li>
+              <li><b>Without moving the View in Google Earth</b> - Capture the same view using 
+                  Google Earth Pro, and overwrite the image that you just captured (Ctrl + Alt + 
+                  S).</li>
+              <li><img src="graphics/capture/cog_edit.png" alt="Pro Button" />
+                  Click &#39;Georectify Google Earth Pro Images&#39;, and select the image file to rewrite 
+                  the World File. </li>
+          </ol>
+                  
+               <h2>
+              <a name="image_reproject"></a>Reprojecting Image using the tools built into MapWindow
+              </h2>
+          <p>From the <i><b>GIS Tools</b></i> menu (If you do not see this menu, make sure it 
+              is activated under Plug-ins), select <i><b>Image</b></i>, and then <i><b>
+              Reproject Image.</b></i></p>
+          <p>Select the image from the open file dialog box.&nbsp; You will see its 
+              information in the <i><b>Selected Images</b></i> dialog (below).&nbsp; You can 
+              add more images here to be re-projected if they are all using the same system.</p>
+              <br />
+          <img alt="Color Image Capture Form" src="graphics/capture/select_image_reproj.png" style="padding-left: 60px"/>
+          <p>When you are ready, click <i><b>OK</b></i> , and the enter the new projection 
+              system into the <i><b>Choose Projection</b></i> dialog.</p><br />
+              <img alt="Color Image Capture Form" src="graphics/capture/new_proj.png" style="padding-left: 60px"/>
+              <p>Once completed, an information box will come up.&nbsp; Click the red x on the 
+                  upper right to close.&nbsp; Your reprojected files will be in the same directory 
+                  as the original with the with &quot;_Reprojected&quot; appended to the file name</p><br />
+      </div>
+    </div>
+    <div id="footer">
+      <div id="footerlogo">
+         <img alt="Shape2Earth Logo" src="graphics/shp2e3.gif" height="53" width="143" />
+      </div>
+      <div id="copyright">
+        <p>
+          ©2010 Shape2Earth - <a href="http://shape2earth.com">About Shape2Earth</a>
+        </p>
+      </div>
+    </div>
+    <p id="date">
+      Updated on December 20, 2010
+    </p>
+    <script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-12126347-1");
+pageTracker._trackPageview();
+} catch(err) {}</script
+  </body></html>

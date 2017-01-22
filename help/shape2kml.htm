@@ -1,0 +1,335 @@
+<!DOCTYPE HTML>
+<html><head>  
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+    <link href="styles/user_docs.css" rel="stylesheet" type="text/css" />
+    <link href="styles/local_extensions.css" rel="stylesheet" type="text/css" />
+    <link href="styles/app.css" rel="stylesheet" type="text/css" />
+    <title>
+      Shapefiles to KML - Shape2Earth User Guide
+    </title>
+  
+  </head><body id="index">
+    <a name="top"></a>
+    <div id="header">
+      <div id="logo">
+       <a href="http://warp4.com"><img alt="warp4.com" src="graphics/shp2e3.gif" border="0" /></a> 
+      </div>      
+      <div id="contact" style="position: relative; float: right"><a href="mailto:info@shape2earth.com" target="_blank">Questions or Comments?</a> </div>
+    <!--  <h1 id="doc_title">
+        Shape2Earth for MapWindow User Guide
+      </h1> -->
+    </div>
+    <div id="wrapper">
+       <div id="sidenav">
+          <ul>            
+             <li>
+              <h1>
+                <a href="Guide">Introduction</a>
+              </h1>
+            </li>
+            <li>            
+              <h1>
+                <a href="getting_to_know">Getting to Know Shape2Earth</a>
+              </h1>
+              <ul>
+                <li>
+                  <a href="getting_to_know#kml_tab">KML Tab</a>
+                </li>              
+                <li>
+                  <a href="getting_to_know#properties_tab">Properties Tab</a>
+                </li>
+                <li>
+                  <a href="getting_to_know#gis_tab">GIS Data</a>
+                </li>
+                <li>
+                  <a href="getting_to_know#query_tab">Query Tab</a>
+                </li>
+                 <li>
+                  <a href="getting_to_know#options_tab">Options Tab</a>
+                </li>
+                 <li>
+                  <a href="getting_to_know#balloon_tab">Balloon Tab</a>
+                </li>              
+              </ul>
+            </li>
+             <li class="selected">
+              <h1>
+                <strong>Converting Shapefiles to KML</strong>
+              </h1>
+              <ul>            
+                <li><a href="shape2kml#point_data">Converting Point Data</a></li>
+              <li><a href="shape2kml#line_data">Converting Line Data</a></li>
+              <li><a href="shape2kml#polygon_data">Converting Polygon Data</a></li>
+            </ul>
+            </li>
+              <h1>
+                <a href="map_overlay">Create Google Earth Overlays</a>
+              </h1>
+                     
+             <li>
+              <h1>
+               <a href="image_capture">Capture Georectified Google Earth Images</a>
+              </h1>
+            </li>        
+             <li>
+              <h1>
+                <a href="screen_overlay">Add a Screen Overlay</a>
+              </h1>
+            </li>
+          </ul>        
+      </div>
+      <div id="pagecontent">
+        <h2>
+            Converting Shapefile to KML
+        </h2><br />       
+        <p>
+                        Shape2Earth for MapWindow GIS converts shapefiles into Keyhole Markup Language 
+            (KML) for viewing in Google Earth.
+        </p>
+          <p>
+              To convert a Shapefile to KML, first ensure that MapWindow GIS and Shape2Earth 
+              are loaded on your computer (<a href="Guide#install">installation 
+              instructions</a>).</p>
+          <p>
+              Open MapWindow, and either add a shapefile, or open a MapWindow project.&nbsp; 
+              These examples use the &#39;United States&#39; project file that is installed with 
+              MapWindow (C:\Program Files\MapWindow\Sample Projects\United States\United 
+              States.mwprj)</p>
+              <br />
+               <img alt="MapWindow with USA Project" src="graphics/mw_usa.png" 
+              style="padding-left: 60px; height: 569px; width: 674px;"  />
+ 
+        <h2>
+          <a name="export_tools"></a>KML Exporting 
+        </h2>
+          <p>
+              Shapefiles can be exported to KML using three methods.&nbsp; There are three 
+              buttons on the toolbar for accessing these options.
+              </p>
+              
+              <p><img src="graphics/kml/output_buttons.png" alt="KML Output Tools" /></p>
+              
+              <ul>
+              <li><img src="graphics/kml/kml_file.png" alt="Save as KML" />
+                Save as KML
+          </li>
+              <li><img src="graphics/kml/16x16.png" alt="Save as KML and Load in Google Earth" />
+                Save as KML and load in Google Earth
+          </li>
+           <li><img src="graphics/kml/ni_closed_connected.png" alt="Save as KML and load in Google Earth as a Network Link" />
+                Save as KML and load in Google Earth as a Network Link
+          </li>
+          <li><img src="graphics/kml/rss.gif" alt="Save as GeoRSS" />
+                Save as a GeoRSS XML File
+          </li>
+          </ul>
+<p>
+              Saving as a network link is useful if you want to keep exporting the shapefile using differerent options, and do not want Google Earth to zoom away from it's view everytime the KML file is reloaded.
+              </p>          
+
+        <h2>
+          <a name="point_data"></a>Quick Example - Converting Point Data
+        </h2>
+          <p>
+              Using the <i><b>United States</b></i> project (see Converting Shapefile to KML 
+              above), click on the <i><b>USA Cities</b></i> layer on the MapWindow Legend to 
+              select it.&nbsp; Then, right click on <b><i>USA Cities</i></b>, and select <i>
+              <b>Properties</b></i> from the menu.</p>
+           <p>
+          <img alt="Overview of Google Earth" src="graphics/capture_point/point01.png" 
+                   style="padding-left: 20px; height: 440px; width: 628px;" />
+        </p>
+         <p>
+              We are going to apply a theme to the data using it&#39;s attribute data.&nbsp; On 
+              the <i><b>Coloring Scheme Editor</b></i>, click on the drop down box next to <i>
+              <b>Field to color by</b></i>, and select the value <b><i>CAPITAL</i></b>.&nbsp; 
+              This will base the color of the city points by this value (is, or is not the 
+              State&#39;s capital).</p>
+        <p>
+           <img alt="Overview of Google Earth" src="graphics/capture_point/point02.png" 
+                style="padding-left: 20px; height: 399px; width: 239px;" />
+        </p>
+         <p>
+              On the Coloring Scheme Editor, click next to the lightening Bolt icon to vew 
+              your options for symbolizing the data.&nbsp; MapWindow gives you three options.</p>
+              <ol>
+               <li><strong>Single Symbol</strong> - This is the default if nothing is selected.  A single symbol is applied to each feature.</li>
+              <li><strong>Continuous Ramp</strong> - Makes a smooth transition from one color to 
+                  another based on an attrinbute value.</li>
+              <li><strong>Equal Breaks</strong> - Allows users to organize data into specific 
+                  color categories based on thier attribute relationship</li>
+              <li><strong>Unique Values</strong> - Create a unique symbol for each unique value in 
+                  the selected attribute field,</li>
+              </ol>
+              <p>For this example, we will select "<i><b>Unique Values</b></i>" (see below).</p>
+         <p>
+           <img alt="Overview of Google Earth" src="graphics/capture_point/point03.png" 
+                 style="padding-left: 20px; height: 400px; width: 265px;" />
+        </p>
+         <p>
+              After selecting <i><b>Unique Values</b></i>, we see that two values have been 
+              added.&nbsp; Y for capital cities, and N for non-capital cities.&nbsp; We can 
+              change the colors for these two data items by clicking on color in the <i><b>
+              Color Column</b></i> to open the <i><b>Color</b></i> dialog box (below).</p>
+         <p>
+           <img alt="Overview of Google Earth" src="graphics/capture_point/point04.png" 
+                 style="padding-left: 20px; height: 464px; width: 631px;" />
+        </p>
+         <p>
+              Keep clicking <i><b>OK</b></i> until all of the dialog boxes are closed, and we 
+              are back at the <i><b>Legend Editor</b></i>.&nbsp; Now check the <i><b>Point 
+              Size</b></i> to make sure it is a good size for Google Earth (1 is good to start 
+              with --&nbsp; see below)</p>
+         <p>
+           <img alt="Overview of Google Earth" src="graphics/capture_point/point05.png" 
+                 style="padding-left: 20px; height: 445px; width: 348px;" />
+        </p>
+         <p>
+              Now, we are ready to create some KML.&nbsp; Close the<i><b> Legend Editor</b></i>, 
+              and select <i><b>Export to KML</b></i> from the <i><b>Shape2Earth</b></i> menu 
+              (below).</p>
+         <p>
+           <img alt="Overview of Google Earth" src="graphics/capture_point/point06a.png" 
+                 style="padding-left: 20px; height: 489px; width: 647px;" />
+        </p>
+         <p>
+              On the Shape2Earth form below, we have changed the Layer Name from upper case 
+              CITIES to Cities, and have selected to have the Document open (the KML file will 
+              be expanded in Google Earth&#39;s Places tree).&nbsp; We will not be using 3D 
+              options for this, but you are free to try it out..
+          </p>
+         <p>
+           <img alt="Overview of Google Earth" src="graphics/capture_point/point07_kml.png" style="padding-left: 20px" />
+        </p>
+         <p>
+              Click on the <i><b>Properties</b></i> tab, and then click on the yellow pushpin 
+              icon next to the <i><b>Style</b></i> label.&nbsp; You will get the<i><b> Icon 
+              Selector</b></i> form below.&nbsp; Since we will be using the color codes 
+              created by MapWindow for the data, it is good to use a non-colored icon that 
+              will more easily show the MapWindow color.&nbsp; We have selected the 
+              shaded_dot.png icon below.&nbsp; Click <i><b>OK</b></i> when complete.</p>
+         <p>
+           <img alt="Overview of Google Earth" src="graphics/capture_point/point08_icon.png" 
+                 style="padding-left: 20px; height: 562px; width: 537px;" />
+        </p>
+         <p>
+              Click on the button next to <i><b>Color</b></i> to change the color of the 
+              labels for each point.&nbsp; We have selected green below.</p>
+         <p>
+           <img alt="Overview of Google Earth" src="graphics/capture_point/point09_label_color.png" style="padding-left: 20px" />
+        </p>
+         <p>
+              Click on <i><b>Create Label Rollover</b></i> to select the symbol that will 
+              appear when the user hovers the mouse over a point in Google Earth.&nbsp; We 
+              have selected a different icon from the <i><b>Icon Selector</b></i>, increased 
+              the size of the point and label, and selected red for the labels color.&nbsp; We 
+              have also selected <i><b>Use Map Colors </b></i>from the <i><b>Point Options</b></i>, 
+              so we will not change the color of the icon.</p>
+         <p>
+           <img alt="Overview of Google Earth" src="graphics/capture_point/point10_style_rollover.png" style="padding-left: 20px" />
+        </p>
+         <p>
+              On the <i><b>GIS Data</b></i> tab, we have selected CITY_NAME as the <i><b>Name Field</b></i>, 
+              and we have selected STATE_NAME as the <i><b>Folder Field</b></i>.&nbsp; This 
+              means that each point will be named by the city it represents, and grouped into 
+              the Folder with the name of the state it is in.</p>
+          <p>
+              We have also selected <i><b>Order by Feature Name</b></i> and <i><b>Order by 
+              Folders</b></i>.&nbsp; These options will sort the points alphabetically by 
+              their name, and will sort the Folders in the same manner.</p>
+          <p>
+              In the <i><b>Select Attributes to Write to KML</b></i> box, we have checked the 
+              attribute fields whose data we would like to see in the Google Earth pop-up 
+              balloon for each point</p>
+         <p>
+           <img alt="Overview of Google Earth" src="graphics/capture_point/point11_gis_data.png" style="padding-left: 20px" />
+        </p>
+              <p>
+              On the <i><b>Options</b></i> tab, we have not changed the defaults.&nbsp; All the 
+                  data in the shapefile will be exported, and the Folders will be closed, but not 
+                  locked (user will be able to expand the folder).</p>
+          <p>
+         <img alt="Overview of Google Earth" src="graphics/capture_point/point_11a_options.png" style="padding-left: 20px" />
+        </p>
+   
+         <p>
+              On the <i><b>Balloon</b></i> tab, we have selected <i><b>Custom Balloon 1</b></i>.&nbsp; 
+              Balloons are defined in an XML file in the Shape2Earth directory, and can be 
+              manually modified or created using a text editor.&nbsp; We have also changed the
+              <i><b>Organization Name</b></i> to My Organization.
+          </p>
+          <p>
+              Once set, we can create our KML and load it into Google Earth by clicking on the
+              <i><b>Load In GE</b></i> button.</p>
+         <p>
+           <img alt="Overview of Google Earth" src="graphics/capture_point/point12_load.png" style="padding-left: 20px" />
+        </p>
+         <p>
+              Below is the resulting KML file in Google Earth.&nbsp; Note that in the Places 
+              tree, a KML file named Cities is loaded with a Folder for every state that is 
+              closed.&nbsp; The folders are in alphabetic order, as are the city points inside 
+              of them (Iowa folder opened for reference).&nbsp; Also not that while all 
+              non-capital cities are green, capital cities (Des Moines) are red.</p>
+          <p>
+           <img alt="Overview of Google Earth" src="graphics/capture_point/point14_ge.jpg" 
+                  style="padding-left: 20px; height: 600px; width: 751px;" />
+        </p>
+         <p>
+              When the user hovers over a point (Des Moines below), the rollover style comes 
+              into effect.&nbsp; Both the icon and the label have changed.<p>
+           <img alt="Overview of Google Earth" 
+                src="graphics/capture_point/point15_ge_hover.jpg" 
+                style="padding-left: 20px; height: 649px; width: 745px;" />
+        </p>
+         <p>
+              Below is the custom balloon that we have selected.&nbsp; Balloon can be changed 
+              to meet the needs of your organization.:
+          </p>
+        <p>
+           <img alt="Overview of Google Earth" 
+                src="graphics/capture_point/point16_balloon_open.png" 
+                style="padding-left: 20px; height: 644px; width: 746px;" />
+        </p>
+        <br />
+        <h2>
+              <a name="line_data"></a>Quick Example - Converting Line Data
+              </h2>
+          <p>
+          UNDER CONSTRUCTION ..Export a Line:
+        </p>
+          <h2>
+              <a name="polygon_data"></a>Quick Example - Converting Polygon Data
+          </h2>
+          <p>
+              UNDER CONSTRUCTION ..Export a Polygon Example
+              </p>
+          <h2>
+              <a name="-feature_select"></a>Selecting Features to Export</h2>
+          <p>
+          UNDER CONSTRUCTION ..Selecting Features to Export:
+          </p>
+      </div>
+    </div>
+    <div id="footer">
+      <div id="footerlogo">
+        <img alt="Shape2Earth Logo" src="graphics/shp2e3.gif" height="53" width="143" />
+      </div>
+
+      <div id="copyright">
+        <p>
+          ©2010 Shape2Earth - <a href="http://shape2earth.com">About Shape2Earth</a>
+        </p>
+      </div>
+    </div>
+    <p id="date">
+      Updated on December 20, 2010     </p>
+      <script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-12126347-1");
+pageTracker._trackPageview();
+} catch(err) {}</script
+  </body></html>
