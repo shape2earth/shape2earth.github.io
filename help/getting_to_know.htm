@@ -1,0 +1,427 @@
+<!DOCTYPE HTML>
+<html><head>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+    <link href="styles/user_docs.css" rel="stylesheet" type="text/css" />
+    <link href="styles/local_extensions.css" rel="stylesheet" type="text/css" />
+    <link href="styles/app.css" rel="stylesheet" type="text/css" />
+    <title>
+      Shape2Earth User Form- Shape2Earth User Guide
+    </title>
+
+  </head><body id="index">
+    <a name="top"></a>
+    <div id="header">
+      <div id="logo">
+         <a href="http://warp4.com"><img alt="warp4.com" src="graphics/shp2e3.gif" border="0" /></a>
+      </div>
+      <div id="contact" style="position: relative; float: right"><a href="mailto:info@shape2earth.com" target="_blank">Questions or Comments?</a> </div>
+    <!--  <h1 id="doc_title">
+        Shape2Earth for MapWindow User Guide
+      </h1> -->
+    </div>
+    <div id="wrapper">
+      <div id="sidenav">
+          <ul>
+             <li>
+              <h1>
+                <a href="Guide.htm">Introduction</a>
+              </h1>
+            </li>
+            <li class="selected">
+              <h1>
+                <strong>Getting to Know Shape2Earth</strong>
+              </h1>
+              <ul>
+                <li>
+                  <a href="#kml_tab.htm">KML Tab</a>
+                </li>
+                <li>
+                  <a href="#properties_tab.htm">Properties Tab</a>
+                </li>
+                <li>
+                  <a href="#gis_tab">GIS Data</a>
+                </li>
+                <li>
+                  <a href="#query_tab">Query Tab</a>
+                </li>
+                 <li>
+                  <a href="#options_tab">Options Tab</a>
+                </li>
+                 <li>
+                  <a href="#balloon_tab">Balloon Tab</a>
+                </li>
+              </ul>
+            </li>
+             <li>
+              <h1>
+                <a href="shape2kml">Converting Shapefiles to KML</a>
+              </h1>
+            <ul>
+            <li><a href="shape2kml#point_data">Converting Point Data</a></li>
+              <li><a href="shape2kml#line_data">Converting Line Data</a></li>
+              <li><a href="shape2kml#polygon_data">Converting Polygon Data</a></li>
+             </ul>
+             </li>
+            <li>
+              <h1>
+                <a href="map_overlay">Create Google Earth Overlays</a>
+              </h1>
+            </li>
+             <li>
+              <h1>
+                <a href="image_capture">Capture Georectified Google Earth Images</a>
+              </h1>
+            </li>
+             <li>
+              <h1>
+                <a href="screen_overlay">Add a Screen Overlay</a>
+              </h1>
+            </li>
+          </ul>
+      </div>
+      <div id="pagecontent">
+        <h2>
+          Introduction
+        </h2><br />
+        <p>
+          <em>This user guide describes Shape2Earth Version 1.47 and later.</em>
+        </p>
+        <p>
+          Welcome to Shape2Earth for <a href="http://www.mapwindow.org/">MapWindow GIS</a>!&nbsp; Shape2Earth is the easiest and cheapest way to
+            convert GIS data into Keyhole Markup Language (KML) for viewing in Google Earth.
+        </p>
+          <p>
+              With Shape2Earth for MapWindow, you can create advanced symbology in MapWindow,
+              which will be used by Shape2Earth to create your KML file.&nbsp; You can also
+              create information balloons to help convey information to viewers.<br/>
+        </p>
+
+        <h2>
+          <a name="getting_to_know"></a><strong>Getting to Know Shape2Earth</strong>
+        </h2>
+        <p>
+          The following describes the user interface and some of the features available in Shape2Earth<span class="style1">:</span>
+        </p>
+        <div class="note">
+            <a name="kml_tab"></a><strong>KML Tab </strong>
+          <p>The KML Tab allows users to select some basic options related the the KML file that will be generated</p>
+        </div>
+        <p>
+          <img alt="Overview of Google Earth" src="graphics/kml_tab.png" />
+        </p>
+        <ol>
+          <li>
+            <strong>Layer Name</strong> - Use this to set the name that will be seen in the
+              Google Earth &quot;Places&quot; when you load the KML file
+          </li>
+          <li value="2">
+            <strong>Opacity</strong> - Use this to set the percentage of opacity for each KML
+              Placemark.
+          </li>
+          <li value="3">
+              <strong>Document : Open</strong> - When this is checked, the KML Document will
+              be expanded in the Google Earth &quot;Places&quot; tree.
+          </li>
+            <li>
+            <strong>Doucment Locked</strong> - When this is checked, the KML Document will be
+                closed, and will not be able to be opened.</li>
+           <li>
+            <strong>Altitude Mode</strong> - Select the value to be used to se the KML
+               <a href="http://code.google.com/apis/kml/documentation/kmlreference.html#altitudemode">
+               &lt;altitudeMode&gt;</a>.&nbsp; The 3D source options area not available if &quot;Clamped
+               to Ground&quot; is selected</li>
+           <li>
+               <strong>Unit of measure</strong> - Sets the units which will be used for height
+               values (Feet or Meters).
+          </li>
+           <li>
+            <strong>By Attribute </strong>- When this is selected, you can choose a numeric
+               attribute field from the shapefile, whose values will be used for height.
+          </li>
+           <li>
+               <strong>By Input</strong> - When this is selected, the single numeric value
+               entered by the user will be applied to all points.
+          </li>
+           <li>
+            <strong>By Z Value</strong> - When this is selected, the Z values from the
+               shapefile point will be used (if the data is present).</li>
+               <li>
+                   <strong>Extrude Features</strong> - When checked, the 3D feature will be
+                   connected to the ground (see
+                   <a href="http://code.google.com/apis/kml/documentation/kmlreference.html#extrude">
+                   &lt;extrude&gt;</a>)</li>
+               <li>
+                   <strong>Tessellate Features</strong> - When checked, the linear feature will
+                   follow the ground terrain (see
+                   <a href="http://code.google.com/apis/kml/documentation/kmlreference.html#tessellate">
+                   &lt;tessellate&gt;</a>).</li>
+        </ol>
+        <div class="note">
+           <a name="properties_tab"></a> <strong>Properties Tab </strong>
+            <p>The Properties Tab provides additional functionality for presenting geospatial
+                features in Google Earth.&nbsp; In the example below-right, a polygon shapefile is
+                being exported. The right example is a point.</p>
+        </div>
+
+        <p>
+          <img alt="Overview of Google Earth" src="graphics/properties_tab.png" style="padding-right: 20px" />
+           <img alt="Overview of Google Earth" src="graphics/properties_tab_pnt.png" />
+        </p>
+        <ol>
+          <li>
+            <strong>Fill Polygon </strong>- If checked, the polygon will be filled.&nbsp; If
+              unchecked, the polygon will be hollow with only its lines showing.
+          </li>
+          <li>
+            <strong>Create Labels </strong>- If checked, Shape2Earth will create a centroid
+              point from the polygon to use as a label.
+          </li>
+          <li>
+              <strong>Labels At Height - Labels At Height</strong>- Only visible when &quot;Create Label&quot; is checked.&nbsp;
+              When checked, the point for the label will be at the same height as the top of
+              the polygons.If unchecked, the point will be on the ground.</li>
+           <li>
+               <strong>Point Options - Use Map Color </strong>- When a point shapefile is being
+               converted, the color that MapWindow has assigned to each point will be assigned
+               to that point in KML.
+          </li>
+          <li>
+              <strong>Style </strong>- Styles here are specific to points and labels.&nbsp;Styling
+              for lines and polygons are defined in MapWindow GIS.&nbsp; KML allows you to assign
+              point information to lines and polygons as well. Clicking on the icon in this
+              form will open the <a href="#icon_selector">Icon Selector</a>.</li>
+          <li>
+              <strong>Style - Label</strong> - Select the size of the label text.&nbsp;The
+              default is 1.
+          </li>
+          <li>
+              <strong>Style - Label - Color </strong>- Set the color of the label text.
+          </li>
+            <li>
+              <strong>Style - Icon </strong>- Select the size of the icon.&nbsp; the default is
+                .8.
+          </li>
+          <li>
+              <strong>Create Label Rollover </strong>- .When this is checked, Shape2Earth will
+              write a
+              <a href="http://code.google.com/apis/kml/documentation/kmlreference.html#stylemap">
+              StyleMap</a> for these features.&nbsp; A style map will allow the user to define
+              a seperate style that shows when the point is hovered over in Google Earth.</li>
+          <li>
+              <strong>Style - Rollover </strong>- .This defines the style that will be applied
+              to the point feature when the user hovers over it in Google Earth.
+          </li>
+        </ol>
+        <br />
+            <div class="note">
+           <a name="icon_selector"></a> <strong>Icon Selector for Google Earth or custom point icons</strong>
+        </div>
+
+        <p>
+          <img alt="Overview of Shape2Earth Icon Selector" src="graphics/iconSelector.png" style="padding-right: 20px" />
+        </p>
+        <ol>
+          <li>
+              <strong>Add Custon Icon </strong>- Allows you to add an icon from your hard
+              drive.&nbsp; The selected icon will show up in the icon window, and will be
+              available later.
+          </li>
+           <li>
+               <strong>Clear Custon Icons </strong>- Clears all custom icons that have been
+               loaded.
+          </li>
+          <li>
+              <strong>OK </strong>- Changes the current Shape2Earth feature Icon to the Icon
+              selected on this form.
+          </li>
+          <li>
+              <strong>Cancel </strong>- Closes thie form without changing the Shape2Earth
+              feature icon.
+          </li>
+
+        </ol>
+        <br />
+         <div class="note">
+            <a name="gis_tab"></a><strong>GIS Data Tab </strong>
+            <p>The GIS Data Tab provides options for embedding Shapefile attribute data in the KML file</p>
+        </div>
+        <p>
+          <img alt="Overview of Shape2Earth Data Tab" src="graphics/data_tab.png" />
+          <img alt="Overview of Shape2Earth Query Tab" src="graphics/gis_data_folders.png" style="padding-right: 20px"/>
+        </p>
+        <ol>
+          <li>
+              <strong>Name Field</strong> - Use this drop down box to select a GIS attribute
+              field to get values to populate the KML Placemark
+              <a href="http://code.google.com/apis/kml/documentation/kmlreference.html#name">Name</a>&nbsp; This is the
+              value used for labels. You will see this value next to Google Earth points, and
+              in the Google Earth .
+          </li>
+          <li>
+              <strong>Snippet Field</strong> - Use this drop down box to select a GIS
+              attribute field to get values to populate the KML
+              <a href="http://code.google.com/apis/kml/documentation/kmlreference.html#snippet">
+              Snippet</a>.&nbsp; This value is also used as
+              <a href="http://www.georss.org/Main_Page">GeoRSS </a>Link Field if the data is
+              exported to GeoRSS.
+          </li>
+          <li>
+              <strong>Folder Field</strong> - If you would like to sort data into
+              <a href="http://code.google.com/apis/kml/documentation/kmlreference.html#folder">
+              Folders</a>, select the attribute field that will be used to to define the
+              Folder values. If there is no value in this field, Folders will not be used.</li>
+           <li>
+               <strong>Order by Feature Name</strong> - When checked, KML features will be
+               sorted in alphabetical order using the Name Field value.
+          </li>
+           <li>
+               <strong>Order By Folder</strong> - Only available when a Folder Field is
+               selected, this option will sort the Folders in alphabetical order using the Folder Field value.
+          </li>
+           <li>
+               <strong>Select Attributes to Write to KML</strong> - Each checked attribute will
+               be written into the KML
+               <a href="http://code.google.com/apis/kml/documentation/kmlreference.html#description">
+               Description</a>, and will appear in the Google Earth pop-up balloon.
+          </li>
+        </ol>
+             <p>The graphics below demonstrate an KML file in which Open Document has been
+                 selected from the KML Tab, and Sort by Name and a Folder Field were not selected.  The second graphic shows data that was sorted in to Folders and
+                 Ordered by Feature Name (STATE_NAME) and by the Folder Name (SUB_REGION).&nbsp;
+                 Open Document was not checked, and the user expanded the E N Cen Folder.</p>
+
+             <p>
+          <img alt="Overview of Shape2Earth Query Tab" src="graphics/document_open.png" style="padding-right: 40px"/>
+          <img alt="Overview of Shape2Earth Query Tab" src="graphics/folders_ordered.png" style="padding-right: 20px"/>
+        </p>
+        <br />
+          <div class="note">
+           <a name="query_tab"> </a><strong>Query Tab </strong>
+            <p>The Query Tab allows users to view Shapefile attribute data, and query for features with specific values</p>
+        </div>
+        <p>
+        <img alt="Overview of Google Earth" src="graphics/query_tab_blank.png" style="padding-right: 20px" />
+          <img alt="Overview of Shape2Earth Query Tab" src="graphics/query_iowa.png" style="padding-right: 20px"/>
+           <img alt="Overview of Shape2Earth Query Tab" src="graphics/show_selected.png"/>
+        </p>
+        <ol>
+         <li>
+              <strong>Load Attribute Table</strong> - The shapefiles attribute table is not
+              automatically loaded.&nbsp; Click the &quot;Load Attribute Table&quot; button to load.
+          </li>
+          <li>
+              <strong>&quot;Search For&quot; field</strong> - You can search for a specific value in the
+              table by typing in this text field and then clicking &quot;<strong>Search</strong>&quot;.
+          </li>
+          <li>
+              <strong>Show Selected</strong> - Click this if you only want see the selected items in the
+              table. You can return to the full view by clicking<strong>Show All.</strong> </li>
+          <li>
+              <strong>Zoom to Selected</strong> - This will zoom you to the selected feature
+              in MapWindow and in Google Earth.
+          </li>
+        </ol>
+        <br />
+        <div class="note">
+            <a name="options_tab"></a><strong>Options Tab </strong>
+            <p>The Options Tab provides options for what spatial features will be exported, and
+                additonal options on how Folders will behave.</p>
+        </div>
+        <p>
+          <img alt="Overview of Options Tab" src="graphics/options_tab.png" />
+        </p>
+        <ol>
+          <li>
+              <strong>Export All</strong> - This is the defauls setting, and means that all
+              features will be exported to KML.
+          </li>
+          <li>
+              <strong>Export Selected</strong> - When selected, only the features that have
+              been selected in MapWindow using the selection tool will be exported to KML.
+          </li>
+          <li>
+              <strong>Export Current View</strong> - When selected, only the features visible
+              in the MapWindow current View will be exported to KML.
+          </li>
+          <li>
+              <strong>Current View Options</strong> - Use Only available when &quot;Export Current
+              View&quot; is selected, determines if the features need to be completetely in or only
+              be intersected by the MapWindow View.
+          </li>
+          <li>
+              <strong>Folder Options Open</strong> - If Folders are being used to sort data,
+              checking this means the folders will be open (expanded).
+          </li>
+          <li>
+              <strong>Folder Options Locked</strong> - If Folders are being used to sort data,
+              checking this means the folders will be locked (they will be closed, and users
+              will not be able to expand them.
+          </li>
+          <li>
+              <strong>GeoRSS Options - Export Description</strong> - If exporting to GeoRSS,
+              this will export the HTML description into your GeoRSS file in the Item tag.
+          </li>
+          <li>
+              <strong>GeoRS Options - Export GIS Attributes</strong> -&nbsp; If exporting to
+              GeoRSS, this will export the Field value and types as custom extensions to the
+              GeoRSS file in the Item tag.
+          </li>
+          <li>
+              <strong>Projection Information</strong> - For informational purposes, this is
+              the proj4 string used to represent the shapefiles projection information.
+          </li>
+        </ol>
+        <br />
+        <div class="note">
+            <a name="balloon_tab"></a><strong>Balloon Tab </strong>
+            <p>The Balloon Tab provides options and customizations to the Google Earth data balloon</p>
+        </div>
+        <p>
+          <img alt="Overview of Shape2Earth Balloon Tab" src="graphics/balloon_tab.png" />
+        </p>
+        <ol>
+        <li>
+              <strong>Name Selected Template</strong> - Use this to select the XML template
+              you will use for your balloon.
+          </li>
+          <li>
+              <strong>Organization Name </strong>- The name of your organization.
+          </li>
+           <li>
+              <strong>Organization Website </strong>- Your organizations website.
+          </li>
+           <li>
+              <strong>Organization Icon</strong> - The URL of an icon representing your
+               organization.</li>
+           <li>
+               <strong>Header Picture URL</strong>- A URL to a graphic that will act as the
+               balloon header.</li>
+           <li>
+              <strong>Additional Information</strong> - Any additional URL link to information,
+          </li>
+        </ol>
+
+      </div>
+    </div>
+    <div id="footer">
+      <div id="footerlogo">
+        <img alt="Shape2Earth Logo" src="graphics/shp2e3.gif" height="53" width="143" />
+      </div>
+      <div id="copyright">
+        <p>
+            ©2010 Shape2Earth - <a href="http://www.google.com/about.html">About Shape2Earth</a>
+        </p>
+      </div>
+    </div>
+    <p id="date">
+      Updated on December 20, 2010</p>
+      <script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-12126347-1");
+pageTracker._trackPageview();
+} catch(err) {}</script
+  </body></html>
