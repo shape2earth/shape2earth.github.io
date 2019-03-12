@@ -1,4 +1,4 @@
-Shape2Earth by Warp4
+Shape2Earth
 info@warp4.com
 
 Shape2Earth website
